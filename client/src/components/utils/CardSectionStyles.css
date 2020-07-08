@@ -31,3 +31,22 @@
 .StripeElement--webkit-autofill {
   background-color: #fefde5 !important;
 }
+
+button {
+    border: none;
+    background-color: #000;
+    color: #fff;
+    padding: 15px 30px;
+    margin-top: 10px;
+}
+
+.Button-container{
+    text-align: center;
+    width: 30%;
+    margin: 30vh auto;
+}
+
+label {
+    font-weight: 600;
+    font-size: 18px;
+}

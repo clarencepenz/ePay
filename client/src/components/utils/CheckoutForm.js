@@ -3,6 +3,7 @@ import axios from 'axios';
 import {ElementsConsumer, CardElement} from '@stripe/react-stripe-js';
 
 import CardSection from './CardSection';
+import './CardSectionStyles.css';
 
 class CheckoutForm extends React.Component {
   handleSubmit = async (event) => {
@@ -18,7 +19,7 @@ class CheckoutForm extends React.Component {
       return;
     }   
 
-    
+
     const res = await axios.post('http://localhost:5000/api/v1/stripe/pay')
     const clientSecret = res.data['client_secret'];
     const result = await stripe.confirmCardPayment(clientSecret, {
@@ -49,8 +50,10 @@ class CheckoutForm extends React.Component {
   render() {
     return (
       <form onSubmit={this.handleSubmit}>
-        <CardSection />
-        <button disabled={!this.props.stripe}>Confirm order</button>
+        <div className='Button-container'>
+             <CardSection />
+             <button disabled={!this.props.stripe}>Confirm order</button>
+        </div>
       </form>
     );
   }
