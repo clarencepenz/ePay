@@ -1,5 +1,5 @@
 import React from 'react';
-import Stripe from './components/utils/Stripe';
+import Route from './components/routes';
 
 
 
@@ -7,7 +7,7 @@ import Stripe from './components/utils/Stripe';
 function App() {
     return(
       <div>
-         <Stripe/>
+         <Route/>
       </div>
     )
  
