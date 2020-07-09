@@ -41,6 +41,10 @@ button {
     cursor: pointer;
 }
 
+button:hover {
+  background-color: dodgerblue;
+}
+
 .Button-container{
     text-align: center;
     width: 30%;

@@ -20,7 +20,7 @@ class CheckoutForm extends React.Component {
     }   
 
 
-    const res = await axios.post('http://localhost:5000/api/v1/stripe/pay')
+    const res = await axios.post(' https://cipher-epay.herokuapp.com/api/v1/stripe/pay')
     const clientSecret = res.data['client_secret'];
     const result = await stripe.confirmCardPayment(clientSecret, {
       payment_method: {
