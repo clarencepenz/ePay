@@ -55,3 +55,10 @@ label {
     font-weight: 600;
     font-size: 18px;
 }
+
+
+@media (max-width: 900px){
+    .Button-container{
+      width: 80%;
+  }
+}
